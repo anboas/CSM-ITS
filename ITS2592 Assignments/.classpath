@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="src" path="Assignment04"/>
-	<classpathentry kind="src" path="Assignment03"/>
-	<classpathentry kind="src" path="Assignment02"/>
-	<classpathentry kind="src" path="Assignment01"/>
+	<classpathentry kind="src" path="Assignments"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
