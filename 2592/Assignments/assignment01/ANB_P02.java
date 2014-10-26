@@ -1,8 +1,9 @@
 package assignment01;
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+
+import javax.swing.JApplet;
 
 /***********************************************************************
 'Project:           Assignment 01
@@ -10,7 +11,7 @@ import java.awt.event.MouseMotionListener;
 'Company Info:  	anboas@gmail.com (240) 561-8173
 'Date:              Sept 14, 2014
 'Description:      	Problem Number 01 Chapter 14
-'    
+'
 '	FollowMe Applet
 '
 '	Write an applet that initially displays the word "Hello" in the
@@ -24,12 +25,12 @@ import java.awt.event.MouseMotionListener;
 
 public class ANB_P02 extends JApplet {
 	private static final long serialVersionUID = 1L;
-	
+
 	// First x/y set to start at
 	private int x = 100, y = 100;
-	
+
 	// String to draw
-	private String outputString = "Hello";
+	//private String outputString = "Hello";
 
 	/**
 	 * Default Constructor
@@ -43,6 +44,7 @@ public class ANB_P02 extends JApplet {
 	 * MouseMotionListener
 	 */
 	private class MouseMoved implements MouseMotionListener {
+		@Override
 		public void mouseMoved(MouseEvent e) {
 
 			// Get current mouse X/Y
@@ -54,6 +56,7 @@ public class ANB_P02 extends JApplet {
 			repaint();
 		}
 
+		@Override
 		public void mouseDragged(MouseEvent e) {
 		}
 	}
