@@ -38,10 +38,14 @@ public class MT03_FileDriver {
 		System.out.println("There are " + recordsCount
 				+ " records in the file \"" + arraySource.toPath() + "\"");
 
+
 		// Load file into LinkedHashSet
 		Set<String> currentSet = new LinkedHashSet<String>();
 		currentSet = ReadFileUtilities.readFileIntoHashSet(femaleNames, filePath);
 		ReadFileUtilities.readFileIntoArray(femaleNames, filePath);
+
+		// Allow user to see duplicate entries
+		System.out.println("There are " + currentSet.size() + " records in the Set.");
 
 		Thread.sleep(2000);
 
