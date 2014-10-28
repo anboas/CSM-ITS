@@ -27,7 +27,7 @@ public class MT03_FileDriver {
 	InterruptedException {
 
 		// Declare and instantiate variables
-		String filePath = "J:\\Adam\\School\\ITS-2591\\Workspace\\ITS2592\\female1.txt";
+		String filePath = "E:\\Users\\whspr\\git\\CSM-ITS\\2592\\Exams\\midterm\\female1.txt";
 		int recordsCount = ReadFileUtilities.readFileSize(filePath);
 		File arraySource = new File(filePath);
 		String[] femaleNames = new String[recordsCount];
