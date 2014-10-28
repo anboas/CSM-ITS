@@ -53,13 +53,11 @@ public class FileSearchUtilities {
 	/**
 	 * Perform a sequential search on a Set on a generic type
 	 * 
-	 * @param <e>
-	 * @param <t>
 	 * @param currentSet
 	 * @param value
 	 * @return
 	 */
-	public static <e, t> boolean hashSearch(Set<e> currentSet, t value) {
+	public static boolean hashSearch(Set<String[]> currentSet, String value) {
 		boolean found = false;
 
 		if (currentSet.contains(value)) {
