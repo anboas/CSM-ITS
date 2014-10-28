@@ -1,7 +1,11 @@
 package midterm;
+
+import java.util.Set;
+
 public class FileSearchUtilities {
 	/**
 	 * Perform binary search on a Comparable Array
+	 * 
 	 * @param array
 	 * @param value
 	 * @return
@@ -35,12 +39,35 @@ public class FileSearchUtilities {
 				searchPerm++;
 			}
 		}
-		if(found){
-			System.out.println("\nFound " + value + " after " + searchPerm + " perumtations at " + position + ".");
+		if (found) {
+			System.out.println("\nFound " + value + " after " + searchPerm
+					+ " perumtations at " + position + ".");
 		} else {
-			System.out.println("\nDid not find " + value + " after " + searchPerm + " perumtations.");
+			System.out.println("\nDid not find " + value + " after "
+					+ searchPerm + " perumtations.");
 		}
- 
+
 		return position;
+	}
+
+	/**
+	 * Perform a sequential search on a Set on a generic type
+	 * 
+	 * @param <e>
+	 * @param currentSet
+	 * @param value
+	 * @return
+	 */
+	public static <e> boolean hashSearch(Set<e> currentSet, e value) {
+		boolean found = false;
+
+		if (currentSet.contains(value)) {
+			found = true;
+		}
+
+		if (found) {
+			System.out.println("FOUND: " + value);
+		}
+		return found;
 	}
 }
