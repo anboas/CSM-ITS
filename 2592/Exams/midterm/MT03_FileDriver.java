@@ -1,6 +1,8 @@
 package midterm;
 import java.io.File;
 import java.io.IOException;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 import javax.swing.JOptionPane;
 
@@ -36,6 +38,10 @@ public class MT03_FileDriver {
 		System.out.println("There are " + recordsCount
 				+ " records in the file \"" + arraySource.toPath() + "\"");
 
+		// Load file into LinkedHashSet
+		Set<String> currentSet = new LinkedHashSet<String>();
+		currentSet = ReadFileUtilities.readFileIntoHashSet(femaleNames, filePath);
+		ReadFileUtilities.readFileIntoArray(femaleNames, filePath);
 
 		Thread.sleep(2000);
 
