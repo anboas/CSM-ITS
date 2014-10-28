@@ -45,14 +45,19 @@ public class MT03_FileDriver {
 		boolean end = false;
 
 		// Perform additional searches
-		while (end != true) {
-			userInput = JOptionPane
-					.showInputDialog("Which name would you like to search for? (type xxx to end)");
-			if (userInput.compareTo(EOF) == 0) {
-				end = true;
-			} else if (userInput != null) {
-				FileSearchUtilities.binarySearch(femaleNames, userInput);
+		try {
+			while (end != true) {
+				userInput = JOptionPane
+						.showInputDialog("Which name would you like to search for? (type xxx to end)");
+				if (userInput.compareTo(EOF) == 0) {
+					end = true;
+				} else if (userInput != null) {
+					FileSearchUtilities.binarySearch(femaleNames, userInput);
+				}
 			}
+
+		} catch (Exception e) {
+			// User ignored dialog
 		}
 		JOptionPane.showMessageDialog(null, "Progam Complete.");
 	}
