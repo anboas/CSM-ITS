@@ -9,9 +9,9 @@ import javax.swing.JOptionPane;
 'Programmer:     	Adam Boas
 'Company Info:  	anboas@gmail.com (240) 561-8173
 'Date:              Oct 14, 2014
-'Description:      	Problem 01
+'Description:      	Problem 03
 '
-'	MT02_FileDriver
+'	MT03_FileDriver
 '
 '	Develop a driver for ReadFileUtilities. Load an array from a file into
 '	a HashSet.
