@@ -57,7 +57,7 @@ public class FileSearchUtilities {
 	 * @param value
 	 * @return
 	 */
-	public static boolean hashSearch(Set<String[]> currentSet, String value) {
+	public static boolean hashSearch(Set<String> currentSet, String value) {
 		boolean found = false;
 
 		if (currentSet.contains(value)) {

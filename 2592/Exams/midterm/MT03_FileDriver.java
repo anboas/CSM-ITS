@@ -58,7 +58,7 @@ public class MT03_FileDriver {
 				if (userInput.compareTo(EOF) == 0) {
 					end = true;
 				} else if (userInput != null) {
-					FileSearchUtilities.binarySearch(femaleNames, userInput);
+					FileSearchUtilities.hashSearch(currentSet, userInput);
 				}
 			}
 
