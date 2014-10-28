@@ -47,8 +47,6 @@ public class MT03_FileDriver {
 		// Allow user to see duplicate entries
 		System.out.println("There are " + currentSet.size() + " records in the Set.");
 
-		Thread.sleep(2000);
-
 		// Declare and initialize variables
 		final String EOF = "xxx";
 		String userInput;
@@ -68,6 +66,7 @@ public class MT03_FileDriver {
 
 		} catch (Exception e) {
 			// User ignored dialog
+			System.out.println("Dialog closed -- Use the EOF value next time.");
 		}
 		JOptionPane.showMessageDialog(null, "Progam Complete.");
 	}
