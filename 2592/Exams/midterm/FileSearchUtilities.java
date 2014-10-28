@@ -60,8 +60,10 @@ public class FileSearchUtilities {
 	public static boolean hashSearch(Set<String> currentSet, String value) {
 		boolean found = false;
 
-		if (currentSet.contains(value)) {
-			found = true;
+		for (String setItem : currentSet) {
+			if (setItem.equalsIgnoreCase(value)) {
+				found = true;
+			}
 		}
 
 		if (found) {
