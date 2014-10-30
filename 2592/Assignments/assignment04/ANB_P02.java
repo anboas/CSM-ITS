@@ -9,7 +9,7 @@ package assignment04;
 '
 ' Generic Linked Lists
 '
-' 	Modify the doubly-linked list class presented in this chapter so it
+' 	Modify the double-linked list class presented in this chapter so it
 '	works with generic types. Add the following methods drawn from the
 '	java.util.List interface:
 
