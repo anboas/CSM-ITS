@@ -86,7 +86,9 @@ public class StringListType implements StringList {
 		elements++;
 	}
 
-	/** Clear the list. */
+	/** 
+	 * Clear the list. 
+	 */
 	public void clear() {
 		for (int index = 0; index < list.length; index++) {
 			list[index] = null;
@@ -241,7 +243,9 @@ public class StringListType implements StringList {
 		return temp;
 	}
 
-	/** Resizes the list to twice its current length. */
+	/**
+	 * Resizes the list to twice its current length.
+	 */
 	private void resize() {
 		// Calculate the new length, which is the current
 		// length multiplied by the resizing factor.
