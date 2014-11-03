@@ -208,8 +208,8 @@ public class StringListType implements StringList
    }
    
    /** Resizes the list to twice its current length. */
-   private void resize()
-   {
+//   private void resize()
+//   {
       // Calculate the new length, which is the current
       // length multiplied by the resizing factor.
 	// YOUR CODE
