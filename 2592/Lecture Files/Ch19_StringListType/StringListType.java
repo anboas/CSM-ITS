@@ -105,10 +105,10 @@ public class StringListType implements StringList
        @exception IndexOutOtBoundsException When index
                   is out of bounds.
    */
-   public String get(int index)
-   {
-	// YOUR CODE
-   }
+//   public String get(int index)
+//   {
+//	// YOUR CODE
+//   }
 
    /** Gets the index of the first occurrence of the
        specified string.
@@ -116,18 +116,18 @@ public class StringListType implements StringList
        @return The index of the first occurrence of str
                if it exists; -1 if str is not in the list.
    */
-   public int indexOf(String str)
-   {
-      int index = 0;          // Index counter
-      boolean found = false;  // Search flag
-      
-      // Step through the list. When the string
-      // is found, set found to true and stop.
-   // YOUR CODE
-      
-      // Return the index of str or -1.
-   // YOUR CODE
-   }
+//   public int indexOf(String str)
+//   {
+//      int index = 0;          // Index counter
+//      boolean found = false;  // Search flag
+//      
+//      // Step through the list. When the string
+//      // is found, set found to true and stop.
+//   // YOUR CODE
+//      
+//      // Return the index of str or -1.
+//   // YOUR CODE
+//   }
    
    /** Determines whether the list is empty.
        @return true if the list is empty; false otherwise.
@@ -217,13 +217,13 @@ public class StringListType implements StringList
       // Create a new list.
 	// YOUR CODE
       
-      // Copy the existing elements to the new list.
-      for (int index = 0; index < elements; index++)
-         tempList[index] = list[index];
-      
-      // Replace the existing list with the new one.
-      list = tempList;
-   }
+//      // Copy the existing elements to the new list.
+//      for (int index = 0; index < elements; index++)
+//         tempList[index] = list[index];
+//      
+//      // Replace the existing list with the new one.
+///      list = tempList;
+//   }
   
    /** Replace the string at a specified index with
        another string.
@@ -233,28 +233,28 @@ public class StringListType implements StringList
        @exception IndexOutOtBoundsException When index
                   is out of bounds.     
    */
-   public String set(int index, String str)
-   {
-      if (index >= elements || index < 0)
-         throw new IndexOutOfBoundsException();
-
-      // Save the existing string at that index.
-   // YOUR CODE
-      
-      // Replace the string with str.
-   // YOUR CODE
-      
-      // Return the previously stored string.
-      return temp;
-   }
+//   public String set(int index, String str)
+//   {
+//      if (index >= elements || index < 0)
+//         throw new IndexOutOfBoundsException();
+//
+//      // Save the existing string at that index.
+//   // YOUR CODE
+//      
+//      // Replace the string with str.
+//   // YOUR CODE
+//      
+//      // Return the previously stored string.
+//      return temp;
+//   }
    
    /** Get the number of elements in the list.
        @return The number of elements in the list.
    */
-   public int size()
-   {
-	// YOUR CODE
-   }
+//   public int size()
+//   {
+//	// YOUR CODE
+//   }
    
    /** Convert the list to a String array.
        @return A String array with the same elements as the list.
