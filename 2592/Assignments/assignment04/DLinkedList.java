@@ -4,13 +4,13 @@ package assignment04;
  * Modified version of Addison Wesley's- Starting Out With Java 2nd Edition
  * Implementation of a double linked list.
  */
-class DLinkedList {
+class DLinkedList<E> {
 
 	/**
 	 * The Node class stores a list element and a reference to the next node.
 	 */
 	private class Node {
-		String value; // Value of a list element
+		E value; // Value of a list element
 		Node next; // Next node in the list
 		Node prev; // Previous element in the list
 
@@ -24,7 +24,7 @@ class DLinkedList {
 		 * @param p
 		 *            The reference to the predecessor node.
 		 */
-		Node(String val, Node n, Node p) {
+		Node(E val, Node n, Node p) {
 			value = val;
 			next = n;
 			prev = p;
@@ -36,7 +36,7 @@ class DLinkedList {
 		 * @param val
 		 *            The element to be stored in the Node.
 		 */
-		Node(String val) {
+		Node(E val) {
 			// Just call the other (sister) constructor
 			this(val, null, null);
 		}
@@ -84,7 +84,7 @@ class DLinkedList {
 	 * @param e
 	 *            The value to add.
 	 */
-	public void add(String e) {
+	public void add(E e) {
 		if (isEmpty()) {
 			last = new Node(e);
 			first = last;
@@ -105,7 +105,7 @@ class DLinkedList {
 	 * @exception IndexOutOfBoundsException
 	 *                When the index is out of bounds.
 	 */
-	public void add(int index, String e) {
+	public void add(int index, E e) {
 		if (index < 0 || index > size()) {
 			String message = String.valueOf(index);
 			throw new IndexOutOfBoundsException(message);
@@ -144,7 +144,7 @@ class DLinkedList {
 	}
 
 	/**
-	 * The toString method computes the string representation of the list.
+	 * The toE method computes the string representation of the list.
 	 * 
 	 * @return The string representation of the linked list.
 	 */
@@ -170,7 +170,7 @@ class DLinkedList {
 	 * @exception IndexOutOfBoundsException
 	 *                When index is out of bounds.
 	 */
-	public String remove(int index) {
+	public E remove(int index) {
 		if (index < 0 || index >= size()) {
 			String message = String.valueOf(index);
 			throw new IndexOutOfBoundsException(message);
@@ -182,7 +182,7 @@ class DLinkedList {
 			target = target.next;
 		}
 
-		String element = target.value; // ELement to return
+		E element = target.value; // ELement to return
 		Node pred = target.prev; // Node before the target
 		Node succ = target.next; // Node after the target
 
@@ -209,7 +209,7 @@ class DLinkedList {
 	 *            The element to remove.
 	 * @return true if the element was removed, false otherwise.
 	 */
-	public boolean remove(String element) {
+	public boolean remove(E element) {
 		if (isEmpty()) {
 			return false;
 		}
