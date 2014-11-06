@@ -55,8 +55,8 @@ public class ANB_P01 {
 		myGeneralList.displayList();
 
 		// Add new elements to the beginning and end of the list.
-		myGeneralList.add(0, "dog");
-		myGeneralList.add("cat");
+		myGeneralList.add(0, "New Element in the beginning");
+		myGeneralList.add("New Element in the end");
 
 		// Display the list.
 		System.out.println("\nNow with new first and last elements:");
