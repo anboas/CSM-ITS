@@ -83,14 +83,32 @@ public class GeneralListType implements GeneralList<Object> {
 
 	@Override
 	public Object get(int index) {
-		// TODO Auto-generated method stub
-		return null;
+		if (index >= elements || index < 0) {
+			throw new IndexOutOfBoundsException();
+		}
+		return list[index];
 	}
 
 	@Override
 	public int indexOf(Object element) {
-		// TODO Auto-generated method stub
-		return 0;
+		int index = 0; // Index counter
+		boolean found = false; // Search flag
+
+		// Step through the list. When the string
+		// is found, set found to true and stop.
+		while (!found && index < elements) {
+			if (list[index].equals(element)) {
+				found = true;
+			} else {
+				index++;
+			}
+		}
+
+		// Return the index of element or -1.
+		if (!found) {
+			index = -1;
+		}
+		return index;
 	}
 
 	@Override
