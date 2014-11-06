@@ -188,8 +188,7 @@ public class GeneralListType implements GeneralList<Object> {
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return elements;
 	}
 
 	/**
