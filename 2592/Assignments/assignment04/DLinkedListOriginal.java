@@ -1,10 +1,10 @@
 package assignment04;
 
 /**
- * Modified version of Addison Wesley's- Starting Out With Java 2nd Edition
- * Implementation of a double linked list.
+ * Example used from Addison Wesley - Starting Out With Java 2nd Edition
+ * Implementation of a double linked lust
  */
-class DLinkedList {
+class DLinkedListOriginal {
 
 	/**
 	 * The Node class stores a list element and a reference to the next node.
@@ -48,7 +48,7 @@ class DLinkedList {
 	/**
 	 * Constructor
 	 */
-	public DLinkedList() {
+	public DLinkedListOriginal() {
 		first = null;
 		last = null;
 	}
