@@ -113,8 +113,7 @@ public class GeneralListType implements GeneralList<Object> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return (elements == 0);
 	}
 
 	@Override
