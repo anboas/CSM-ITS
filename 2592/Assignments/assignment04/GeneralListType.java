@@ -118,8 +118,33 @@ public class GeneralListType implements GeneralList<Object> {
 
 	@Override
 	public boolean remove(Object element) {
-		// TODO Auto-generated method stub
-		return false;
+		int index = 0; // Index counter
+		boolean found = false; // Search flag
+
+		// Perform a sequential search for element. When it is
+		// found, remove it and stop searching.
+		while (!found && index < elements) {
+			if (list[index].equals(element)) {
+				list[index] = null;
+				found = true;
+			}
+			index++;
+		}
+
+		// If the value was found, shift all subsequent
+		// elements toward the front of the list.
+		if (found) {
+			while (index < elements) {
+				list[index - 1] = list[index];
+				index++;
+			}
+
+			// Adjust the number of elements.
+			elements--;
+		}
+
+		// Return the status of the search.
+		return found;
 	}
 
 	@Override
