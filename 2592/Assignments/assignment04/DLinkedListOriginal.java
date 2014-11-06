@@ -2,7 +2,7 @@ package assignment04;
 
 /**
  * Example used from Addison Wesley - Starting Out With Java 2nd Edition
- * Implementation of a double linked lust
+ * Implementation of a double linked list
  */
 class DLinkedListOriginal {
 
