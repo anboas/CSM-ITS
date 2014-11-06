@@ -203,6 +203,15 @@ class DLinkedList<E> {
 	}
 
 	/**
+	 * Removes all of the elements from the list
+	 */
+	public void clear() {
+		while(!isEmpty()){
+			remove(0);
+		}
+	}
+
+	/**
 	 * The remove method removes an element from the list.
 	 * 
 	 * @param element
