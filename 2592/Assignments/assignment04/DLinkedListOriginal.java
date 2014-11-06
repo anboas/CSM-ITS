@@ -146,7 +146,7 @@ class DLinkedListOriginal {
 	/**
 	 * The toString method computes the string representation of the list.
 	 * 
-	 * @return The string representtation of the linked list.
+	 * @return The string representation of the linked list.
 	 */
 	@Override
 	public String toString() {
