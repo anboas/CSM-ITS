@@ -44,7 +44,7 @@ public class ANB_P01 {
 
 		// Display the list.
 		System.out.println("\nHere are the words you entered:");
-		displayList(myGeneralList);
+		myGeneralList.displayList();
 
 		// Remove the first and last elements.
 		myGeneralList.remove(0);
@@ -52,7 +52,7 @@ public class ANB_P01 {
 
 		// Display the list.
 		System.out.println("\nNow with the first and last removed:");
-		displayList(myGeneralList);
+		myGeneralList.displayList();
 
 		// Add new elements to the beginning and end of the list.
 		myGeneralList.add(0, "dog");
@@ -60,21 +60,8 @@ public class ANB_P01 {
 
 		// Display the list.
 		System.out.println("\nNow with new first and last elements:");
-		displayList(myGeneralList);
+		myGeneralList.displayList();
 
 		keyboard.close();
-	}
-
-	/**
-	 * Displays the elements in a GeneralList
-	 * @param list
-	 */
-	public static void displayList(GeneralList<?> list)
-	{
-		for (int index = 0; index < list.size(); index++)
-		{
-			System.out.println("Index " + index + ": " +
-					list.get(index));
-		}
 	}
 }
