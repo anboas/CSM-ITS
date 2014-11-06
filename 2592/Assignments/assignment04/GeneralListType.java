@@ -3,26 +3,27 @@ package assignment04;
 /**
  * @author Adam Boas
  */
-public class GeneralListType implements GeneralList<Object> {
+public class GeneralListType<E> implements GeneralList<E> {
 	// Constants for the default capacity and
 	// the resizing factor.
 	private final int DEFAULT_CAPACITY = 10;
 	private final int RESIZE_FACTOR = 2;
 
 	// Private Fields
-	private Object[] list; // The List
+	private E[] list; // The List
 	private int elements; // Number of elements stored
 
 	/**
 	 * This constructor creates an empty list of the default capacity.
 	 */
+	@SuppressWarnings("unchecked")
 	public GeneralListType() {
-		list = new Object[DEFAULT_CAPACITY];
+		list = (E[]) (new Object[DEFAULT_CAPACITY]);
 		elements = 0;
 	}
 
 	@Override
-	public void add(Object element) {
+	public void add(E element) {
 		// If the list is full, resize it.
 		if (elements == list.length) {
 			resize();
@@ -36,7 +37,7 @@ public class GeneralListType implements GeneralList<Object> {
 	}
 
 	@Override
-	public void add(int index, Object element) {
+	public void add(int index, E element) {
 		// First make sure the index is valid.
 		if (index >= elements || index < 0)
 			throw new IndexOutOfBoundsException();
@@ -67,7 +68,7 @@ public class GeneralListType implements GeneralList<Object> {
 	}
 
 	@Override
-	public boolean contains(Object element) {
+	public boolean contains(E element) {
 		int index = 0; // Index counter
 		boolean found = false; // Search flag
 
@@ -85,7 +86,7 @@ public class GeneralListType implements GeneralList<Object> {
 	}
 
 	@Override
-	public Object get(int index) {
+	public E get(int index) {
 		if (index >= elements || index < 0) {
 			throw new IndexOutOfBoundsException();
 		}
@@ -93,7 +94,7 @@ public class GeneralListType implements GeneralList<Object> {
 	}
 
 	@Override
-	public int indexOf(Object element) {
+	public int indexOf(E element) {
 		int index = 0; // Index counter
 		boolean found = false; // Search flag
 
@@ -120,7 +121,7 @@ public class GeneralListType implements GeneralList<Object> {
 	}
 
 	@Override
-	public boolean remove(Object element) {
+	public boolean remove(E element) {
 		int index = 0; // Index counter
 		boolean found = false; // Search flag
 
@@ -151,12 +152,12 @@ public class GeneralListType implements GeneralList<Object> {
 	}
 
 	@Override
-	public Object remove(int index) {
+	public E remove(int index) {
 		if (index >= elements || index < 0)
 			throw new IndexOutOfBoundsException();
 
 		// Save the string, but remove it from the list.
-		Object temp = list[index];
+		E temp = list[index];
 		list[index] = null;
 		index++;
 
@@ -175,12 +176,12 @@ public class GeneralListType implements GeneralList<Object> {
 	}
 
 	@Override
-	public Object set(int index, Object element) {
+	public E set(int index, E element) {
 		if (index >= elements || index < 0)
 			throw new IndexOutOfBoundsException();
 
 		// Save the existing string at that index.
-		Object temp = list[index];
+		E temp = list[index];
 
 		// Replace the string with element.
 		list[index] = element;
@@ -197,13 +198,14 @@ public class GeneralListType implements GeneralList<Object> {
 	/**
 	 * Resizes the list to twice its current length.
 	 */
+	@SuppressWarnings("unchecked")
 	private void resize() {
 		// Calculate the new length, which is the current
 		// length multiplied by the resizing factor.
 		int newLength = list.length * RESIZE_FACTOR;
 
 		// Create a new list.
-		Object[] tempList = new String[newLength];
+		E[] tempList = (E[]) (new Object[newLength]);
 
 		// Copy the existing elements to the new list.
 		for (int index = 0; index < elements; index++)
