@@ -45,11 +45,13 @@ public class ANB_P02 {
 		// DLinkedList after additions
 		System.out.println("The linked list is: \n" + linkedExample.toString());
 
-		// Clears DLinkedList
-		linkedExample.clear();
+		//		// Clears DLinkedList
+		//		linkedExample.clear();
+		//
+		//		// DLinkedList after clearing
+		//		System.out.println("The cleared list: " + linkedExample.toString());
 
-		// DLinkedList after clearing
-		System.out.println("The cleared list: " + linkedExample.toString());
+		System.out.println(linkedExample.get(2));
 	}
 
 }

@@ -206,9 +206,36 @@ class DLinkedList<E> {
 	 * Removes all of the elements from the list
 	 */
 	public void clear() {
-		while(!isEmpty()){
+		while (!isEmpty()) {
 			remove(0);
 		}
+	}
+
+	/**
+	 * Returns the element at the specified position in the list
+	 */
+	public E get(int index) {
+		if (index >= this.size()) {
+			throw new NullPointerException(
+					"Index greater than DLinkedList size");
+		} else {
+			Node current = goToIndex(index);
+			return current.value;
+		}
+	}
+
+	/**
+	 * Returns the Node of the desired index
+	 * 
+	 * @param index
+	 * @return
+	 */
+	private Node goToIndex(int index) {
+		Node current = first;
+		for (int i = 0; i < index; i++) {
+			current = current.next;
+		}
+		return current;
 	}
 
 	/**
