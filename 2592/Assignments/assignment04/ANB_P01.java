@@ -26,7 +26,7 @@ public class ANB_P01 {
 	public static void main(String[] args)
 	{
 		// Create a StringListType object.
-		GeneralListType myGeneralList = new GeneralListType();
+		GeneralListType<String> myGeneralList = new GeneralListType<String>();
 
 		// Create a Scanner for keyboard input.
 		Scanner keyboard = new Scanner(System.in);
@@ -36,10 +36,10 @@ public class ANB_P01 {
 		String input = keyboard.nextLine();
 
 		// Tokenize the GeneralList.
-		Object[] tokens = input.split(" ");
+		String[] tokens = input.split(" ");
 
 		// Add each of the tokens to the list.
-		for (Object s : tokens)
+		for (String s : tokens)
 			myGeneralList.add(s);
 
 		// Display the list.
