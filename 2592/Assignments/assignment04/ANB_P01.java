@@ -11,7 +11,7 @@ package assignment04;
 '
 ' 	Write your own array-based list class from scratch, using generics. You can either
 '	implement the GeneralList interface shown in this  chapter, or write your
-'	own interface. Either way, be sure to implement  all of the common list operations.
+'	own interface. Either way, be sure to implement all of the common list operations.
 '
 ' HONOR CODE: I pledge that this program represents my own program code.
 ' I received help from NO ONE in designing and debugging my program.
@@ -22,6 +22,6 @@ package assignment04;
 public class ANB_P01 {
 
 	public static void main(String[] args) {
-		
+
 	}
 }
