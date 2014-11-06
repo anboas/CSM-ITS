@@ -1,5 +1,8 @@
 package assignment04;
 
+/**
+ * @author Adam Boas
+ */
 public class GeneralListType implements GeneralList<Object> {
 	// Constants for the default capacity and
 	// the resizing factor.
@@ -213,12 +216,10 @@ public class GeneralListType implements GeneralList<Object> {
 	/**
 	 * Displays the GeneralList
 	 */
-	public void displayList(){
+	public void displayList() {
 
-		for (int index = 0; index < this.size(); index++)
-		{
-			System.out.println("Index " + index + ": " +
-					this.get(index));
+		for (int index = 0; index < this.size(); index++) {
+			System.out.println("Index " + index + ": " + this.get(index));
 		}
 	}
 
