@@ -33,25 +33,26 @@ public class ANB_P02 {
 	public static void main(String[] args) {
 
 		// Create new DLinkedList
-		DLinkedList<String> linkedExample = new DLinkedList<String>();
+		DLinkedList<Double> linkedExample = new DLinkedList<Double>();
 
 		// Added items to the DLinkedList
-		linkedExample.add("String 0");
-		linkedExample.add("String 1");
-		linkedExample.add("String 2");
-		linkedExample.add("String 3");
-		linkedExample.add("String 4");
+		linkedExample.add((double) 0);
+		linkedExample.add(-9.8);
+		linkedExample.add(567.32);
+		linkedExample.add(2.0);
+		linkedExample.add(-756.4);
+
+		// Set index 0 to the correct double value
+		linkedExample.set(0, 23.2);
 
 		// DLinkedList after additions
 		System.out.println("The linked list is: \n" + linkedExample.toString());
 
-		//		// Clears DLinkedList
-		//		linkedExample.clear();
-		//
-		//		// DLinkedList after clearing
-		//		System.out.println("The cleared list: " + linkedExample.toString());
+		// Clears DLinkedList
+		linkedExample.clear();
 
-		System.out.println(linkedExample.get(2));
+		// DLinkedList after clearing
+		System.out.println("The cleared list: " + linkedExample.toString());
 	}
 
 }
