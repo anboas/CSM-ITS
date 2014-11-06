@@ -225,6 +225,14 @@ class DLinkedList<E> {
 	}
 
 	/**
+	 * 
+	 */
+	public void set(int index, E value) {
+		Node current = goToIndex(index);
+		current.value = value;
+	}
+
+	/**
 	 * Returns the Node of the desired index
 	 * 
 	 * @param index
