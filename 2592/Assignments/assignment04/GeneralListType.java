@@ -65,8 +65,20 @@ public class GeneralListType implements GeneralList<Object> {
 
 	@Override
 	public boolean contains(Object element) {
-		// TODO Auto-generated method stub
-		return false;
+		int index = 0; // Index counter
+		boolean found = false; // Search flag
+
+		// Step through the list. When the string
+		// is found, set found to true and stop.
+		while (!found && index < elements) {
+			if (list[index].equals(element)) {
+				found = true;
+			}
+			index++;
+		}
+
+		// Return the status of the search.
+		return found;
 	}
 
 	@Override
