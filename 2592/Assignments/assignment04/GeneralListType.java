@@ -173,8 +173,17 @@ public class GeneralListType implements GeneralList<Object> {
 
 	@Override
 	public Object set(int index, Object element) {
-		// TODO Auto-generated method stub
-		return null;
+		if (index >= elements || index < 0)
+			throw new IndexOutOfBoundsException();
+
+		// Save the existing string at that index.
+		Object temp = list[index];
+
+		// Replace the string with element.
+		list[index] = element;
+
+		// Return the previously stored string.
+		return temp;
 	}
 
 	@Override
