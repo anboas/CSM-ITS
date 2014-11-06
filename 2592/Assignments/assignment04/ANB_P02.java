@@ -54,5 +54,4 @@ public class ANB_P02 {
 		// DLinkedList after clearing
 		System.out.println("The cleared list: " + linkedExample.toString());
 	}
-
 }

@@ -1,7 +1,5 @@
 package assignment04;
-
 import java.util.Scanner;
-
 /***********************************************************************
 'Project: 			Assignment 04
 'Programmer: 		Adam Boas
@@ -23,8 +21,7 @@ import java.util.Scanner;
 
 public class ANB_P01 {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		// Create a StringListType object.
 		GeneralListType<String> myGeneralList = new GeneralListType<String>();
 
