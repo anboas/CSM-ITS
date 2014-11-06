@@ -210,4 +210,16 @@ public class GeneralListType implements GeneralList<Object> {
 		list = tempList;
 	}
 
+	/**
+	 * Displays the GeneralList
+	 */
+	public void displayList(){
+
+		for (int index = 0; index < this.size(); index++)
+		{
+			System.out.println("Index " + index + ": " +
+					this.get(index));
+		}
+	}
+
 }
