@@ -149,8 +149,26 @@ public class GeneralListType implements GeneralList<Object> {
 
 	@Override
 	public Object remove(int index) {
-		// TODO Auto-generated method stub
-		return null;
+		if (index >= elements || index < 0)
+			throw new IndexOutOfBoundsException();
+
+		// Save the string, but remove it from the list.
+		Object temp = list[index];
+		list[index] = null;
+		index++;
+
+		// Shift all subsequent elements toward
+		// the front of the list.
+		while (index < elements) {
+			list[index - 1] = list[index];
+			index++;
+		}
+
+		// Adjust the number of elements.
+		elements--;
+
+		// Return the string that was removed.
+		return temp;
 	}
 
 	@Override
