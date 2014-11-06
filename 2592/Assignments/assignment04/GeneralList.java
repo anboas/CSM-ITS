@@ -1,7 +1,7 @@
 package assignment04;
 
 /**
- * Taken from Addison Wesley - Starting Out With Java 2nd Edition
+ * Example used from Addison Wesley - Starting Out With Java 2nd Edition
  */
 public interface GeneralList<E> {
 	/**
