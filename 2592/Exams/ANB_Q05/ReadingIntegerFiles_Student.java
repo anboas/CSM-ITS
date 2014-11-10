@@ -1,4 +1,4 @@
-package quiz_05_student;
+package ANB_Q05;
 
 import java.io.*;
 import java.util.HashSet;
