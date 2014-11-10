@@ -144,7 +144,7 @@ class DLinkedList<E> {
 	}
 
 	/**
-	 * The toE method computes the string representation of the list.
+	 * The toString method computes the string representation of the list.
 	 * 
 	 * @return The string representation of the linked list.
 	 */
