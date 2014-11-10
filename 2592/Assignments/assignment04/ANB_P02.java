@@ -44,7 +44,7 @@ public class ANB_P02 {
 
 		// Set index 0 to the correct double value
 		linkedExample.set(0, 23.2);
-
+		
 		// DLinkedList after additions
 		System.out.println("The linked list is: \n" + linkedExample.toString());
 
