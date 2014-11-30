@@ -18,13 +18,50 @@ public class Deque<E> implements Iterable<E> {
 		return front == null;
 	}
 
-	public void addFront(E element) {
-
+	public int getSize() {
+		return size;
 	}
 
-	public E removeFirst() {
+	public void addFront(E element) throws Exception {
+		if (element == null) {
+			throw new Exception("Cannot insert null element");
+		}
 
-		return null;
+		Node newFront = new Node();
+		newFront.element = element;
+
+		// Adjust node pointers
+		if (front != null) {
+			newFront.next = front;
+			front.prev = newFront;
+		}
+		front = newFront;
+
+		// Loop back if rear is null
+		if (rear == null) {
+			rear = front;
+		}
+		size++;
+	}
+
+	public E removeFront() throws Exception {
+		if (front == null) {
+			throw new Exception("Cannot remove a null element");
+		}
+
+		Node tempFront = front;
+		front = front.next;
+
+		// Adjust node pointers
+		if (front == null) {
+			rear = null;
+		} else {
+			front.prev = null;
+		}
+
+		size++;
+
+		return tempFront.element;
 	}
 
 	public void addRear(E element) {
@@ -36,9 +73,7 @@ public class Deque<E> implements Iterable<E> {
 		return null;
 	}
 
-	public int getSize() {
-		return size;
-	}
+
 
 	@Override
 	public Iterator<E> iterator() {
