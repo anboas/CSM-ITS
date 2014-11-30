@@ -2,7 +2,7 @@ package assignment05;
 
 import java.util.Iterator;
 
-public class Deque<E> implements Iterable<E> {
+public class DoubleLinkListDeque<E> implements Iterable<E> {
 
 	private int size; // Size of Deque list
 	private Node front; // First node in the list
@@ -20,7 +20,7 @@ public class Deque<E> implements Iterable<E> {
 	/**
 	 * Deque default constructor
 	 */
-	public Deque() {
+	public DoubleLinkListDeque() {
 
 	}
 

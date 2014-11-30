@@ -26,7 +26,7 @@ import java.util.Iterator;
 
 public class ANB_P01 {
 
-	private static Deque<String> dequeLL = new Deque<String>();
+	private static DoubleLinkListDeque<String> dequeLL = new DoubleLinkListDeque<String>();
 	private static Iterator<String> dLLIterator;
 
 	public static void main(String[] args) throws Exception {
