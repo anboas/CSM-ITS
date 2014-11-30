@@ -1,4 +1,6 @@
 package assignment05;
+import java.util.Iterator;
+
 /***********************************************************************
 'Project: 			Assignment 05
 'Programmer: 		Adam Boas
@@ -24,15 +26,38 @@ package assignment05;
 
 public class ANB_P01 {
 
+	private static Deque<String> dequeLL = new Deque<String>();
+	private static Iterator<String> dLLIterator;
+
 	public static void main(String[] args) throws Exception {
 
-		Deque<String> dequeLL = new Deque<String>();
-
 		dequeLL.addFront("alpha");
+		printList("add front");
+
 		dequeLL.addRear("beta");
+		printList("add rear");
+
 		dequeLL.addRear("gamma");
+		printList("add rear");
+
 		dequeLL.addRear("delta");
+		printList("add rear");
+
 		dequeLL.addRear("epsilon");
-		dequeLL.toString();
+		printList("add rear");
+
+		dequeLL.removeFront();
+		printList("remove front");
+
+		dequeLL.removeRear();
+		printList("remove rear");
+	}
+
+	private static void printList(String operation) {
+		System.out.println("\nAfter doing " + operation + ", elements in list are:");
+		dLLIterator = dequeLL.iterator();
+		while (dLLIterator.hasNext()) {
+			System.out.println(dLLIterator.next());
+		}
 	}
 }

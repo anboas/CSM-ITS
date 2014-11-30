@@ -2,30 +2,49 @@ package assignment05;
 
 import java.util.Iterator;
 
-public class Deque<E> implements Iterable<E>{
+public class Deque<E> implements Iterable<E> {
 
 	private int size; // Size of Deque list
 	private Node front; // First node in the list
 	private Node rear; // Last node in the list
 
+	/**
+	 * Node default constructor
+	 */
 	private class Node {
 		E element;
 		Node next;
 		Node prev;
 	}
 
+	/**
+	 * Deque default constructor
+	 */
 	public Deque() {
 
 	}
 
+	/**
+	 * Checks if front node has a null value
+	 * @return True if deque is empty
+	 */
 	public boolean empty() {
 		return front == null;
 	}
 
+	/**
+	 * Returns size of deque LL
+	 * @return int
+	 */
 	public int getSize() {
 		return size;
 	}
 
+	/**
+	 * Adds an element to the front of the deque
+	 * @param element
+	 * @throws Exception
+	 */
 	public void addFront(E element) throws Exception {
 		if (element == null) {
 			throw new Exception("Cannot insert null element");
@@ -48,6 +67,11 @@ public class Deque<E> implements Iterable<E>{
 		size++;
 	}
 
+	/**
+	 * Removes the front element of the deque
+	 * @return
+	 * @throws Exception
+	 */
 	public E removeFront() throws Exception {
 		if (front == null) {
 			throw new Exception("Cannot remove a null element");
@@ -68,29 +92,39 @@ public class Deque<E> implements Iterable<E>{
 		return oldFront.element;
 	}
 
+	/**
+	 * Adds an element to the rear of the deque
+	 * @param element
+	 * @throws Exception
+	 */
 	public void addRear(E element) throws Exception {
 		if (element == null) {
 			throw new Exception("Cannot insert null element");
 		}
 
-		Node newRear = rear;
-		rear = newRear.prev;
+		Node newRear = new Node();
+		newRear.element = element;
 
 		// Adjust node pointers
-		if(rear != null) {
+		if (rear != null) {
 			newRear.prev = rear;
 			rear.next = newRear;
 		}
 		rear = newRear;
 
 		// Loop back if front is null
-		if (front == null ) {
+		if (front == null) {
 			front = rear;
 		}
 
 		size++;
 	}
 
+	/**
+	 * Removes an element from the rear of the deque
+	 * @return
+	 * @throws Exception
+	 */
 	public E removeRear() throws Exception {
 		if (rear == null) {
 			throw new Exception("Cannot remove a null element");
@@ -100,7 +134,7 @@ public class Deque<E> implements Iterable<E>{
 		rear = oldRear.prev;
 
 		// Adjust node pointers
-		if (rear == null){
+		if (rear == null) {
 			rear = null;
 		} else {
 			rear.next = null;
@@ -112,26 +146,19 @@ public class Deque<E> implements Iterable<E>{
 	}
 
 	@Override
-	public String toString() {
-		StringBuilder strBuilder = new StringBuilder();
-
-		// Use p to walk down the linked list
-		Node p = front;
-		while (p != null) {
-			strBuilder.append(p.element + "\n");
-			p = p.next;
-		}
-		return strBuilder.toString();
-	}
-
-	@Override
+	/**
+	 * Default constructor for deque iterator
+	 */
 	public Iterator<E> iterator() {
 		return new elementIterator();
 	}
 
+	/**
+	 * Iterator for deque
+	 */
 	private class elementIterator implements Iterator<E> {
 
-		private final Node currNode;
+		private Node currNode; // Current node to evaluate
 
 		public elementIterator() {
 			currNode = front;
@@ -151,7 +178,11 @@ public class Deque<E> implements Iterable<E>{
 					e.printStackTrace();
 				}
 			}
-			return null;
+
+			E e = currNode.element;
+			currNode = currNode.next;
+
+			return e;
 		}
 
 		@Override
