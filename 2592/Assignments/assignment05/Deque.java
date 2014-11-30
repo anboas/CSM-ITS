@@ -1,6 +1,8 @@
 package assignment05;
 
-public class Deque<E> {
+import java.util.Iterator;
+
+public class Deque<E> implements Iterable<E>{
 
 	private int size; // Size of Deque list
 	private Node front; // First node in the list
@@ -10,6 +12,10 @@ public class Deque<E> {
 		E element;
 		Node next;
 		Node prev;
+	}
+
+	public Deque() {
+
 	}
 
 	public boolean empty() {
@@ -116,5 +122,46 @@ public class Deque<E> {
 			p = p.next;
 		}
 		return strBuilder.toString();
+	}
+
+	@Override
+	public Iterator<E> iterator() {
+		return new elementIterator();
+	}
+
+	private class elementIterator implements Iterator<E> {
+
+		private final Node currNode;
+
+		public elementIterator() {
+			currNode = front;
+		}
+
+		@Override
+		public boolean hasNext() {
+			return currNode != null;
+		}
+
+		@Override
+		public E next() {
+			if (currNode == null) {
+				try {
+					throw new Exception("Null element");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			return null;
+		}
+
+		@Override
+		public void remove() {
+			try {
+				throw new Exception("Unhandled method.");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 }

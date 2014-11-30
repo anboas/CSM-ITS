@@ -24,7 +24,15 @@ package assignment05;
 
 public class ANB_P01 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
+		Deque<String> dequeLL = new Deque<String>();
+
+		dequeLL.addFront("alpha");
+		dequeLL.addRear("beta");
+		dequeLL.addRear("gamma");
+		dequeLL.addRear("delta");
+		dequeLL.addRear("epsilon");
+		dequeLL.toString();
 	}
 }
