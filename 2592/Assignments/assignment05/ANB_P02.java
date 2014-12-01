@@ -1,5 +1,4 @@
 package assignment05;
-import java.util.Iterator;
 
 /***********************************************************************
 'Project: 			Assignment 05
@@ -26,38 +25,30 @@ import java.util.Iterator;
 
 public class ANB_P02 {
 
-	private static DoubleLinkListDeque<String> dequeLL = new DoubleLinkListDeque<String>();
-	private static Iterator<String> dLLIterator;
+	private static ArrayDeque<String> dequeArray = new ArrayDeque<String>(12);
 
 	public static void main(String[] args) throws Exception {
 
-		dequeLL.addFront("alpha");
-		printList("add front");
+		dequeArray.addFront("alpha");
+		System.out.print("\n\nDeque after operation: " + dequeArray.toString());
 
-		dequeLL.addRear("beta");
-		printList("add rear");
+		dequeArray.addRear("beta");
+		System.out.print("\n\nDeque after operation: " + dequeArray.toString());
 
-		dequeLL.addRear("gamma");
-		printList("add rear");
+		dequeArray.addRear("gamma");
+		System.out.print("\n\nDeque after operation: " + dequeArray.toString());
 
-		dequeLL.addRear("delta");
-		printList("add rear");
+		dequeArray.addRear("delta");
+		System.out.print("\n\nDeque after operation: " + dequeArray.toString());
 
-		dequeLL.addRear("epsilon");
-		printList("add rear");
+		dequeArray.addRear("epsilon");
+		System.out.print("\n\nDeque after operation: " + dequeArray.toString());
 
-		dequeLL.removeFront();
-		printList("remove front");
+		dequeArray.removeFront();
+		System.out.print("\n\nDeque after operation: " + dequeArray.toString());
 
-		dequeLL.removeRear();
-		printList("remove rear");
-	}
+		dequeArray.removeRear();
+		System.out.print("\n\nDeque after operation: " + dequeArray.toString());
 
-	private static void printList(String operation) {
-		System.out.println("\nAfter doing " + operation + ", elements in list are:");
-		dLLIterator = dequeLL.iterator();
-		while (dLLIterator.hasNext()) {
-			System.out.println(dLLIterator.next());
-		}
 	}
 }
