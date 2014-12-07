@@ -1,5 +1,25 @@
 package finalexam;
 
+/***********************************************************************
+ 'Project:           Final Exam
+ 'Programmer:     	Adam Boas
+ 'Company Info:  	anboas@gmail.com (240) 561-8173
+ 'Date:              Dec 7, 2014
+ 'Description:      	Problem 02
+ '
+ '	FE Parsing File / JCF Review
+ '
+ '	Read the data file FA14_Names.txt  which contains last names and find
+ '	out how many duplicate names there are in the file; output that number.
+ '	Then calculate how many occurrences of each duplicate name there are.
+ '	Print those duplicate names and the number of occurrences of each name
+ '	in alphabetical order.
+ '
+ '  HONOR CODE: I pledge that this program represents my own program code.
+ '  I received help from NO ONE in designing and debugging my program.
+ '
+ '**********************************************************************/
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedHashMap;
@@ -11,6 +31,8 @@ import java.util.TreeMap;
 public class ANB_FE02 {
 
 	public static void main(String[] args) {
+		// Initial Program started from work from ANB_Q05 -
+		// ReadingIntegerFiles_Student.java
 
 		// Current String in the file
 		String currLine;
@@ -26,7 +48,6 @@ public class ANB_FE02 {
 		Scanner inputFile = null;
 		try {
 			inputFile = new Scanner(new File(fileName));
-
 		} catch (FileNotFoundException fe) {
 			System.out.println("File not found! " + fe);
 			fe.printStackTrace();
