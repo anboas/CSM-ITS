@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class ANB_P02 {
+public class ANB_FE02 {
 
 	public static void main(String[] args) {
 
@@ -34,8 +34,6 @@ public class ANB_P02 {
 
 		// Read lines from the file until no more are left.
 		while (inputFile.hasNextLine()) {
-			// Increment entries count
-
 			currLine = inputFile.nextLine();
 			if (!currLine.isEmpty()) {
 				entries++;
@@ -45,18 +43,18 @@ public class ANB_P02 {
 					inputSet.put(currLine, 1);
 				}
 			}
-
 		}
+
+		// Close the file.
+		inputFile.close();
 
 		// Print out file statistics
 		System.out.println("File Statistics:\n\tThe file had: \t" + entries
 				+ " Entries.");
 		System.out.println("\tThe file had: \t" + inputSet.size()
 				+ " Unique Entries.");
-		System.out.println("\tThe file had: \t" + (entries - inputSet.size()) + " Duplicate Entries.\n");
-
-		// Close the file.
-		inputFile.close();
+		System.out.println("\tThe file had: \t" + (entries - inputSet.size())
+				+ " Duplicate Entries.\n");
 
 		// Map to store duplicates
 		Map<String, Integer> duplicateSet = new TreeMap<String, Integer>();
@@ -69,8 +67,10 @@ public class ANB_P02 {
 			}
 		}
 
+		// Display duplicate entries
 		for (Map.Entry<String, Integer> entry : duplicateSet.entrySet()) {
-			System.out.println("\t" + entry.getValue() + "\t- " + entry.getKey());
+			System.out.println("\t" + entry.getValue() + "\t- "
+					+ entry.getKey());
 		}
 	}
 }

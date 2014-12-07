@@ -1,5 +1,5 @@
 package finalexam;
 
-public class ANB_P01 {
+public class ANB_FE01 {
 
 }
