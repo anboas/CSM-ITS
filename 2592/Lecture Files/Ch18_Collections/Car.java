@@ -1,4 +1,4 @@
-package lecture;
+package Ch18_Collections;
 /**
  * Figure 18-8 
  * The Car class stores a VIN (Vehicle Identification Number) and a

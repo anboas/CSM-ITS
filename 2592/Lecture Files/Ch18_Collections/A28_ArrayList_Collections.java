@@ -1,4 +1,5 @@
-package lecture;
+package Ch18_Collections;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -53,8 +54,8 @@ public class A28_ArrayList_Collections
 		myList.add(4.);
 		myList.add(5.);
 		myList.add(4.);
-		myList.add(5.);			
-		 		
+		myList.add(5.);
+
 		System.out.println("My List");
 		printList(myList);
 
@@ -82,14 +83,14 @@ public class A28_ArrayList_Collections
 				+ Collections.max(myList));
 
 		double sum =  sumList(myList);
-		 
+
 		System.out.println("The total of the numbers in the array is " + sum);
 		System.out.println("The average of the numbers in the array is " + sum
 				/ myList.size());
 	}
-	
+
 	public static double sumList(ArrayList<Double> inList){
-		
+
 		double sum = 0;
 		for (int i = 0; i < inList.size(); i++)
 		{

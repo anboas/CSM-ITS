@@ -1,4 +1,4 @@
-package lecture;
+package Ch18_Collections;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;

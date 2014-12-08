@@ -1,4 +1,4 @@
-package lecture;
+package Ch18_Collections;
 /**
  * File:&emsp; Employee.java<br />
  * Project:&emsp; C18<br />

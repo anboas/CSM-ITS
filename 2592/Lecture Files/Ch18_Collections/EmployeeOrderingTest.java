@@ -1,4 +1,4 @@
-package lecture;
+package Ch18_Collections;
 import java.util.Comparator;
 
 /**
