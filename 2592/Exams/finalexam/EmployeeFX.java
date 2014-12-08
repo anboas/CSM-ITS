@@ -1,5 +1,7 @@
 package finalexam;
 
+import java.text.DecimalFormat;
+
 public class EmployeeFX {
 
 	private final int id;
@@ -7,6 +9,7 @@ public class EmployeeFX {
 	private final String lastName;
 	private final boolean salaried;
 	private final double salary;
+	private final DecimalFormat decForm = new DecimalFormat("#.00");
 
 	public EmployeeFX(int id, String firstName, String lastName,
 			boolean salaried, double salary) {
@@ -46,6 +49,17 @@ public class EmployeeFX {
 
 	public Double getSalary() {
 		return salary;
+	}
+
+	@Override
+	public String toString() {
+		String str = "";
+		str += "\t" + this.id;
+		str += "\t" + this.firstName;
+		str += "\t" + this.lastName;
+		str += "\t" + this.salaried;
+		str += "\t" + this.salary;
+		return str;
 	}
 
 }
