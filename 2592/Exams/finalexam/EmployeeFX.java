@@ -55,10 +55,10 @@ public class EmployeeFX {
 	public String toString() {
 		String str = "";
 		str += "\t" + this.id;
-		str += "\t" + this.firstName;
-		str += "\t" + this.lastName;
-		str += "\t" + this.salaried;
-		str += "\t" + this.salary;
+		str += ", " + this.firstName;
+		str += ", " + this.lastName;
+		str += ", " + this.salaried;
+		str += ", " + decForm.format(this.salary);
 		return str;
 	}
 
