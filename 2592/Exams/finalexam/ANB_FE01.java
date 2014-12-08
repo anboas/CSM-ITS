@@ -4,16 +4,15 @@ package finalexam;
 'Project:           Final Exam
 'Programmer:     	Adam Boas
 'Company Info:  	anboas@gmail.com (240) 561-8173
-'Date:              Dec 7, 2014
-'Description:      	Problem 02
+'Date:              Dec 8, 2014
+'Description:      	Problem 01
 '
-'	FE Parsing File / JCF Review
+'	FE Comparator Review
 '
-'	Read the data file FA14_Names.txt  which contains last names and find
-'	out how many duplicate names there are in the file; output that number.
-'	Then calculate how many occurrences of each duplicate name there are.
-'	Print those duplicate names and the number of occurrences of each name
-'	in alphabetical order.
+'	Print the list first ordered by id and then by salary.
+'	(Two different sets of output). Show screen shots of these three
+'	cases.  You may add methods to the EmployeeFX class. You must use
+'	comparators to solve this problem.
 '
 '  HONOR CODE: I pledge that this program represents my own program code.
 '  I received help from NO ONE in designing and debugging my program.
