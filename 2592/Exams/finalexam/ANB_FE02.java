@@ -1,11 +1,11 @@
 package finalexam;
 
 /***********************************************************************
- 'Project:           Final Exam
+ 'Project:          Final Exam
  'Programmer:     	Adam Boas
  'Company Info:  	anboas@gmail.com (240) 561-8173
- 'Date:              Dec 7, 2014
- 'Description:      	Problem 02
+ 'Date:             Dec 7, 2014
+ 'Description:      Problem 02
  '
  '	FE Parsing File / JCF Review
  '
