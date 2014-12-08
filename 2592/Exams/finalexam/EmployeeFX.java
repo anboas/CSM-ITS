@@ -1,6 +1,6 @@
 package finalexam;
 
-public class EmployeeFX implements Comparable {
+public class EmployeeFX {
 
 	private final int id;
 	private final String firstName;
@@ -37,14 +37,15 @@ public class EmployeeFX implements Comparable {
 						"Input must not be less than 0.");
 			}
 		}
-
 		return fieldInput;
 	}
 
-	@Override
-	public int compareTo(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public Integer getId() {
+		return id;
+	}
+
+	public Double getSalary() {
+		return salary;
 	}
 
 }
